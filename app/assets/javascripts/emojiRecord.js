@@ -3,10 +3,10 @@ var timer;
 var timeout = 1000;
 var counter = 0;
 var emojiSound = null
-var body=document.getElementById("body")
+var location = [];
 
-// $(document).body.on('keydown',function(event)
-body.addEventListener('keydown',function(event) {
+
+document.body.addEventListener('keydown',function(event) {
   clearTimeout(timer);
 
   emojiSound = {
@@ -88,7 +88,6 @@ body.addEventListener('keydown',function(event) {
   var character = String.fromCharCode(event.which);
   logged.push(event.keyCode);
   console.log(logged);
-  
 
 });
 
@@ -99,8 +98,6 @@ document.getElementById("button").addEventListener('click', function(event) {
     console.log(emojiSound[logged[counter]]);
     
   var sounds = (emojiSound[logged[counter]]);
-  
- 
 
   var playSound = new Howl({
     src: [sounds],
@@ -109,12 +106,14 @@ document.getElementById("button").addEventListener('click', function(event) {
   playSound.play();
   console.log(playSound);
 
-
     counter++;
     if(counter >= logged.length){
       clearInterval(interval);
+      counter = 0;
     };
 
+  // var get = document.body.querySelector("img, img:not(.e)");
+  // console.log(get);
 
-  }, 1000);
+  }, 700);
 })
