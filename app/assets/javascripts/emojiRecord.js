@@ -2,8 +2,8 @@ var logged = [];
 var timer;
 var timeout = 1000;
 var counter = 0;
-var emojiSound = null
-var location = [];
+var emojiSound = null;
+
 
 
 document.body.addEventListener('keydown',function(event) {
@@ -112,8 +112,6 @@ document.getElementById("button").addEventListener('click', function(event) {
       counter = 0;
     };
 
-  // var get = document.body.querySelector("img, img:not(.e)");
-  // console.log(get);
 
   }, 700);
 })
