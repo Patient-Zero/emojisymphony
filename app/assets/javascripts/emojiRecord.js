@@ -123,7 +123,7 @@ window.onload = function(){
         clearInterval(interval);
         counter = 0;
       };
-    }, 700);
+    }, 650);
   });
 
 
