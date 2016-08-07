@@ -1,5 +1,6 @@
 @import url(https://fonts.googleapis.com/css?family=League+Script);
 @import url(https://fonts.googleapis.com/css?family=Raleway:400,300);
+@import url(https://fonts.googleapis.com/css?family=Roboto);
 
 #emoji {
   width: 800px;
@@ -93,10 +94,38 @@ footer {
   bottom: 0;
   position: fixed;
   width: 100%;
-  padding: 3%;
-  margin: 0 auto;
-
+  padding: 1%;
+  margin-left: 38%;
 }
+
+.btn_style {
+  font-family:'Roboto', sans-serif; ;
+  color: #1ECD97;
+  outline:none;
+  height: 40px;
+  text-align: center;
+  width: 130px;
+  border-radius:40px;
+  background: #fff;
+  border: 2px solid #1ECD97 ;
+  letter-spacing:1px;
+  text-shadow:0;
+  font-size:12px;
+  font-weight:bold;
+  }
+
+  #button {
+    margin-right: 20px;
+  }
+
+.btn_style:hover{
+    background: #1ECD97;
+    color: white;
+
+  }
+
+
+\
 
 
 
