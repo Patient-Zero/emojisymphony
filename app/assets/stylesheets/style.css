@@ -88,14 +88,16 @@ width: 16%;
 
 #wrapper {
   margin: 0 auto;
+  height: 80%;
 }
 
-footer {
+#footer {
   bottom: 0;
   position: fixed;
   width: 100%;
   padding: 1%;
   margin-left: 38%;
+  z-index: 10;
 }
 
 .btn_style {

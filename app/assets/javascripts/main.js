@@ -160,24 +160,29 @@ var sound36 = new Howl( {
     });
 
 
- $(window).load(function() {
-  var space = document.getElementById("space");
-    $(space).hide();
+ $(window).load(function(){
   var press = document.getElementById("press");
     $(press).hide();
+  var buttons= document.getElementById("footer");
+    $(footer).hide();
   var emoji= document.getElementById("emojis");
-    $(emoji).animate({ opacity:0},5000);
+    $(emoji).animate({ opacity:0},3000);
   var slided = document.getElementById("slide_down");
-    $(slided).animate({ opacity:0},5000);
+    $(slided).animate({ opacity:0},3000);
   var slideu = document.getElementById("slide_up");
-    $(slideu).animate({opacity:0},5000); 
-  var press=document.getElementById("press");
-      $(press).fadeIn(6000);
-  });
+    $(slideu).animate({opacity:0},3000); 
+    $(press).fadeIn(4000);
+    $(footer).fadeIn(4000);
+});
+
+$(document).keypress(function(event){
+  var press = document.getElementById("press");
+    $(press).fadeOut(200);
+}) 
 
 $(document).keydown(function(event){
 
-  function getRandomPosition(element) {
+  function getRandomPosition(element){
     var x = document.body.offsetHeight - element.clientHeight;
     var y = document.body.offsetWidth - element.clientWidth;
     var randomX = Math.floor(Math.random()*x);
@@ -191,10 +196,6 @@ $(document).keydown(function(event){
       $('body').css("background",hue);
     }
 
-    if (event.keyCode !=32) {
-      var press=document.getElementById("press");
-      $(press).fadeOut();
-     }
 
     if (event.keyCode == 65) {
       sound1.play();
@@ -628,8 +629,7 @@ $(document).keydown(function(event){
       img.style.top = xy[0] + 'px';
       img.style.left = xy[1] + 'px';
     }   
-   
- });  
+});  
 
 $(document).keyup(function(event) {
      if (event.keyCode == 65) {
@@ -980,7 +980,7 @@ $(document).keyup(function(event) {
      if (event.keyCode == 57) {
      var a = document.getElementById('wrapper');
        $("img").fadeOut(1000);
-   }
+      }
 
 });
 

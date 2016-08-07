@@ -1,16 +1,10 @@
 window.onload = function(){
   var logged = [];
   var timer;
-  var timeout = 1000;
   var counter = 0;
-  var emojiSound = null;
   var show = [];
-
-
-  document.body.addEventListener('keydown',function(event) {
-    clearTimeout(timer);
-
-    emojiSound = {
+  var i = 0;
+  var emojiSound = {
       65: "assets/sound1.mp3",
 
       66: "assets/sound2.mp3",
@@ -83,33 +77,36 @@ window.onload = function(){
 
       57: "assets/sound36.mp3"
     };
+  
+
+  document.body.addEventListener('keydown',function(event) {
+    clearTimeout(timer);
+
    
 
-
-  var character = String.fromCharCode(event.which);
-    logged.push(event.keyCode);
-    console.log(logged);
+    var character = String.fromCharCode(event.which);
+      logged.push(event.keyCode);
+      console.log(logged);
+  });  // end of keydown
   
 
   document.getElementById("button").addEventListener('click', function(event){
-      var pictures = document.getElementsByClassName("emojis");
-
-      var picInterval = setInterval(function(){
-        for (var i=0; i<pictures.length; i++){
-        pictures[i].style.display = "block";
-        }
-      }, 700)
-      
+    var pictures = document.getElementsByClassName("emojis");
+    var picInterval = setInterval(function(){
+      pictures[i].style.display = "block";
       show.push(pictures);
-    })
-  });
-
+      i++;
+        if(i >= pictures.length){
+        clearInterval(picInterval);
+        i = 0;
+      };
+    }, 650)
+  });   
 
   document.getElementById("button").addEventListener('click', function(event) {
     var interval = setInterval(function(){
       emojiSound[logged[counter]];
       console.log(emojiSound[logged[counter]]);
-      
     var sounds = (emojiSound[logged[counter]]);
 
     var playSound = new Howl({
@@ -124,28 +121,26 @@ window.onload = function(){
         counter = 0;
       };
     }, 650);
+
   });
 
-
-  document.getElementById("reset").onclick=function(){
-    reset();
-  }
-  
   function reset(){
     var pictures = document.getElementsByClassName("emojis");
-    for (var i=0; i<pictures.length; i++){
-        pictures[i].style.opacity = 0;
-        };
-    if(logged.length >= 0 && show.length >= 0){
-      logged = [],
-      show = [];
+    for (var n=0; n<pictures.length; n++){
+        pictures[n].style.opacity = 0;
+      }
+      logged.length=0;
+      pictures=null;
       console.log(logged);
-    }
+      
+  
+      var counter = 0;
+      // var emojiSound = null;
   };
 
-
-
-
+  document.getElementById("reset").onclick=function(){
+  reset();
+  };
 } //window close brace
     
 
