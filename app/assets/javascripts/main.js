@@ -166,11 +166,11 @@ var sound36 = new Howl( {
   var press = document.getElementById("press");
     $(press).hide();
   var emoji= document.getElementById("emojis");
-    $(emoji).fadeOut(5000);
+    $(emoji).animate({ opacity:0},5000);
   var slided = document.getElementById("slide_down");
-    $(slided).fadeOut(5000);
+    $(slided).animate({ opacity:0},5000);
   var slideu = document.getElementById("slide_up");
-    $(slideu).fadeOut(5000); 
+    $(slideu).animate({opacity:0},5000); 
   var press=document.getElementById("press");
       $(press).fadeIn(6000);
   });
@@ -634,7 +634,7 @@ $(document).keydown(function(event){
 $(document).keyup(function(event) {
      if (event.keyCode == 65) {
      var a= document.getElementById('wrapper');
-      $img = $("img").fadeOut(1000);  
+      $img = $("img:hidden").show("slow");  
     }
 
      if (event.keyCode == 66) {
