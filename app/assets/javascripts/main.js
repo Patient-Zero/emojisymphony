@@ -634,7 +634,7 @@ $(document).keydown(function(event){
 $(document).keyup(function(event) {
      if (event.keyCode == 65) {
      var a= document.getElementById('wrapper');
-      $img = $("img:hidden").show("slow");  
+      $img = $("img").fadeOut(1000);  
     }
 
      if (event.keyCode == 66) {
