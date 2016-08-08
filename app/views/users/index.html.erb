@@ -4,7 +4,9 @@
   <title>Emoji Symphony</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  
+  <link rel="icon" href="assets/emojis/1f600.png" type="image/png" sizes="16x16">
+
+
 </head>
 <body id="body">
 
@@ -18,12 +20,9 @@
       <img class="e" src="assets/emojis/1f61c.png">
       <img class="e" src="assets/emojis/1f3b6.png">
     </div>
-  </div>  
-<div id="slide_up">Symphony </div>
-</div>
-  <div id="space">
-    Press Space to Start a Beat
-  </div>
+    <div id="slide_up">Symphony </div>
+</div>  
+
 
   <div id="press">
     Press A-Z, 0-9 to Compose Your Masterpiece
@@ -32,14 +31,15 @@
 
 <!-- <audio id="sounds" src="mp3/sound1.mp3" type="audio/mp3"></audio> -->
 
-<button id="button">Play Symphony</button>
-<button id="reset" type="reset"> Clear </button>
 
 
 
 
 
 <%= yield %>
-
+<footer id="footer">
+  <button id="button" class="btn_style">Play Symphony</button>
+  <button id="reset" class="btn_style" type="reset"> Clear </button>
+</footer>
 </body>
 </html>
