@@ -4,6 +4,7 @@ window.onload = function(){
   var counter = 0;
   var show = [];
   var i = 0;
+  var pictures = document.getElementsByClassName("emojis");
   var emojiSound = {
       65: "assets/sound1.mp3",
 
@@ -78,6 +79,7 @@ window.onload = function(){
       57: "assets/sound36.mp3"
     };
   
+  
 
   document.body.addEventListener('keydown',function(event) {
     clearTimeout(timer);
@@ -91,7 +93,6 @@ window.onload = function(){
   
 
   document.getElementById("button").addEventListener('click', function(event){
-    var pictures = document.getElementsByClassName("emojis");
     var picInterval = setInterval(function(){
       pictures[i].style.display = "block";
       show.push(pictures);
@@ -125,22 +126,21 @@ window.onload = function(){
   });
 
   function reset(){
-    var pictures = document.getElementsByClassName("emojis");
-    for (var n=0; n<pictures.length; n++){
-        pictures[n].style.opacity = 0;
-      }
+    for(i=0; i<pictures.length; i++){
+      pictures[i].style.display = "none"};
+      pictures.length=0;
       logged.length=0;
-      pictures=null;
-      console.log(logged);
-      
+    };
   
-      var counter = 0;
-      // var emojiSound = null;
-  };
+  console.log(logged);
+  
+
+  var counter = 0;
+  
 
   document.getElementById("reset").onclick=function(){
   reset();
   };
-} //window close brace
+}; //window close brace
     
 
