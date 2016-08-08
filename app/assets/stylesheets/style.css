@@ -21,6 +21,7 @@
   height: 90px;
   margin: 0 auto;
   padding: 0;
+  margin-top: 8%;
 }
 
 #slide_up{
@@ -40,10 +41,12 @@
 #space {
   font-family: "Raleway";
   text-align: center;
-  font-size: 30px;
-  margin-top: 20%;
+  font-size: 20px;
+  margin-top: 4%;
   font-weight: 300;
-  text-decoration: underline;
+  position: relative;
+  width: 100%;
+  height: 9%;
 }
 
 #press {
@@ -71,12 +74,13 @@ html {
 
 body {
   min-height: 90%;
+
 }
 
 #emojis{
   width: 50%;
   margin-left: 25%;
-  margin-top: 10%;
+  margin-top: 4%;
   height: 100px;
 
 }
@@ -102,14 +106,14 @@ width: 16%;
 
 .btn_style {
   font-family:'Roboto', sans-serif; ;
-  color: #1ECD97;
+  color: "DimGray";
   outline:none;
   height: 40px;
   text-align: center;
   width: 130px;
   border-radius:40px;
-  background: #fff;
-  border: 2px solid #1ECD97 ;
+  background: none;
+  border: 2px solid "DimGray"; ;
   letter-spacing:1px;
   text-shadow:0;
   font-size:12px;
@@ -121,7 +125,7 @@ width: 16%;
   }
 
 .btn_style:hover{
-    background: #1ECD97;
+    background: "DimGray";
     color: white;
 
   }

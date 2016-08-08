@@ -161,23 +161,29 @@ var sound36 = new Howl( {
 
 
  $(window).load(function(){
+  $('body').css("background","FloralWhite");
   var press = document.getElementById("press");
     $(press).hide();
-  var buttons= document.getElementById("footer");
+  var space = document.getElementById("space");
+    $(space).hide();
+  var buttons = document.getElementById("footer");
     $(footer).hide();
-  var emoji= document.getElementById("emojis");
-    $(emoji).animate({ opacity:0},1800);
+  var emoji = document.getElementById("emojis");
+    $(emoji).animate({ opacity:0},3000);
   var slided = document.getElementById("slide_down");
-    $(slided).animate({ opacity:0},1800);
+    $(slided).animate({ opacity:0},3000);
   var slideu = document.getElementById("slide_up");
-    $(slideu).animate({opacity:0},1800); 
-    $(press).fadeIn(2500);
-    $(footer).fadeIn(2500);
+    $(slideu).animate({opacity:0},3000); 
+    $(press).fadeIn(4000);
+    $(space).fadeIn(4000);
+    $(footer).fadeIn(4000);
 });
 
 $(document).keypress(function(event){
   var press = document.getElementById("press");
     $(press).fadeOut(90);
+  var space = document.getElementById("space");
+    $(space).fadeOut(90);
 }) 
 
 $(document).keydown(function(event){
@@ -191,7 +197,7 @@ $(document).keydown(function(event){
   }
 
 
-    if (event.keyCode==32){
+    if (event.keyCode == 32){
       var hue = 'rgb(' + (Math.floor(Math.random() * 256)) + ',' + (Math.floor(Math.random() * 256)) + ',' + (Math.floor(Math.random() * 256)) + ')';
       $('body').css("background",hue);
     }
