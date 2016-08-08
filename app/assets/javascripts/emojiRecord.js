@@ -84,32 +84,30 @@ window.onload = function(){
   document.body.addEventListener('keydown',function(event) {
     clearTimeout(timer);
 
-   
-
     var character = String.fromCharCode(event.which);
       logged.push(event.keyCode);
       console.log(logged);
   });  // end of keydown
   
-
+//emoji appear on page
   document.getElementById("button").addEventListener('click', function(event){
     var picInterval = setInterval(function(){
       pictures[i].style.display = "block";
       show.push(pictures);
       i++;
-        if(i >= pictures.length){
+      if(i >= pictures.length){
         clearInterval(picInterval);
         i = 0;
       };
     }, 650)
   });   
 
+//sound heard on page
   document.getElementById("button").addEventListener('click', function(event) {
     var interval = setInterval(function(){
       emojiSound[logged[counter]];
       console.log(emojiSound[logged[counter]]);
     var sounds = (emojiSound[logged[counter]]);
-
     var playSound = new Howl({
       src: [sounds],
       format: "mp3"
@@ -122,25 +120,22 @@ window.onload = function(){
         counter = 0;
       };
     }, 650);
-
   });
 
+//emojis and sounds reset on page
   function reset(){
-    for(i=0; i<pictures.length; i++){
+    for(i = 0; i < pictures.length; i++){
       pictures[i].style.display = "none"};
-      pictures.length=0;
-      logged.length=0;
+      pictures.length = 0;
+      logged.length = 0;
     };
-  
   console.log(logged);
-  
-
   var counter = 0;
   
-
   document.getElementById("reset").onclick=function(){
   reset();
   };
+
 }; //window close brace
     
 

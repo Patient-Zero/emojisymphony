@@ -163,9 +163,9 @@ var sound36 = new Howl( {
  $(window).load(function(){
   var press = document.getElementById("press");
     $(press).hide();
-  var buttons= document.getElementById("footer");
+  var buttons = document.getElementById("footer");
     $(footer).hide();
-  var emoji= document.getElementById("emojis");
+  var emoji = document.getElementById("emojis");
     $(emoji).animate({ opacity:0},1800);
   var slided = document.getElementById("slide_down");
     $(slided).animate({ opacity:0},1800);
@@ -191,7 +191,7 @@ $(document).keydown(function(event){
   }
 
 
-    if (event.keyCode==32){
+    if (event.keyCode == 32){
       var hue = 'rgb(' + (Math.floor(Math.random() * 256)) + ',' + (Math.floor(Math.random() * 256)) + ',' + (Math.floor(Math.random() * 256)) + ')';
       $('body').css("background",hue);
     }
