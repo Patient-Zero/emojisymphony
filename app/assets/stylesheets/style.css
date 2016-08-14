@@ -8,8 +8,6 @@
   margin-top: 10%;
 }
 
-
-
 #slide_down {
   font-family: 'League Script', cursive;
   text-align: center;
@@ -35,8 +33,6 @@
   position: relative;
   -webkit-animation-name: slideu;
 }
-
-
 
 #space {
   font-family: "Raleway";
@@ -82,12 +78,10 @@ body {
   margin-left: 25%;
   margin-top: 4%;
   height: 100px;
-
 }
 
 .e{
-width: 16%;
-
+  width: 16%;
 }
 
 #wrapper {
@@ -118,19 +112,285 @@ width: 16%;
   text-shadow:0;
   font-size:12px;
   font-weight:bold;
+}
+
+#button {
+  margin-right: 20px;
+}
+
+.btn_style:hover{
+    background: "DimGray";
+    color: white;
+}
+
+
+/*Media Queries*/
+
+/*mobile responsiveness tablet*/
+@media screen and (max-width: 1045px ) {
+  
+  #press {
+    font-size: 30px;
+    margin-top: -15%;
+  }
+
+  #emojis {
+    width: 40%;
+    margin-left: 30%;
+    margin-top: 2%;
+    height: 50px;
+  }
+
+  .e {
+    width: 15%;
+  }
+
+  #slide_down {
+    font-size: 90px;
+    width: 300px;
+    height: 90px;
+    margin-top: 8%;
+  }
+
+  #slide_up {
+    font-size: 90px;
+    font-weight: 900px;
+    margin-top: 15%;
+    height: 55px;
+  }
+
+  .btn_style {
+    height: 40px;
+    width: 130px;
+    border-radius:40px;
+    letter-spacing:1px;
+    font-size:12px;
   }
 
   #button {
     margin-right: 20px;
   }
 
-.btn_style:hover{
-    background: "DimGray";
-    color: white;
+  #footer {
+    margin-left: 30%;
+  }
+}
 
+@media screen and (max-width: 842px) {
+
+  #space {
+    font-size: 16px;
+    margin-top: 2%;
   }
 
+  #press {
+    font-size: 20px;
+    margin-top: -15%;
+  }
 
+   #emojis {
+    width: 40%;
+    margin-left: 30%;
+    margin-top: 2%;
+    height: 50px;
+  }
+
+  .e{
+    width: 15%;
+  }
+
+  #slide_down {
+    font-size: 90px;
+    width: 300px;
+    height: 90px;
+    margin-top: 8%;
+  }
+
+  #slide_up{
+    font-size: 90px;
+    font-weight: 900px;
+    margin-top: 10%;
+    height: 55px;
+  }
+
+  .btn_style {
+    height: 40px;
+    width: 130px;
+    border-radius:40px;
+    letter-spacing:1px;
+    font-size:12px;
+  }
+
+  #button {
+    margin-right: 20px;
+  }
+
+  #footer {
+    margin-left: 30%;
+  }
+}
+
+@media screen and (max-width: 655px) and (min-width: 570px){
+    #space {
+    font-size: 16px;
+    margin-top: 2%;
+  }
+
+  #press {
+    font-size: 20px;
+    margin-top: -20%;
+  }
+
+   #emojis {
+    width: 40%;
+    margin-left: 30%;
+    margin-top: 2%;
+    height: 50px;
+  }
+
+  .e {
+    width: 15%;
+  }
+
+  #slide_down {
+    font-size: 80px;
+    width: 300px;
+    height: 90px;
+    margin-top: 8%;
+  }
+
+  #slide_up {
+    font-size: 80px;
+    font-weight: 900px;
+    margin-top: 10%;
+    height: 55px;
+  }
+
+  .btn_style {
+    height: 40px;
+    width: 130px;
+    border-radius:40px;
+    letter-spacing:1px;
+    font-size:12px;
+  }
+
+  #button {
+    margin-right: 20px;
+  }
+
+  #footer {
+    margin-left: 26%;
+  }
+}
+
+/*mobile responsiveness mobile*/
+@media screen and (max-width: 569px) {
+  
+  #space {
+    font-size: 14px;
+    margin-top: 2%;
+  }
+
+  #press {
+    font-size: 18px;
+    margin-top: -20%;
+  }
+
+   #emojis {
+    width: 40%;
+    margin-left: 30%;
+    margin-top: 2%;
+    height: 50px;
+  }
+
+  .e {
+    width: 14%;
+  }
+
+  #slide_down {
+    font-size: 75px;
+    width: 300px;
+    height: 90px;
+    margin-top: 8%;
+  }
+
+  #slide_up {
+    font-size: 75px;
+    font-weight: 900px;
+    margin-top: 10%;
+    height: 55px;
+  }
+
+  .btn_style {
+    height: 40px;
+    width: 130px;
+    border-radius:40px;
+    letter-spacing:1px;
+    font-size:12px;
+  }
+
+  #button {
+    margin-right: 20px;
+  }
+
+  #footer {
+    margin-left: 23%;
+  }
+}
+
+@media screen and (max-width: 499px) {
+  
+  #space {
+    font-size: 14px;
+    margin-top: 2%;
+  }
+
+  #press {
+    font-size: 18px;
+    margin-top: -24%;
+  }
+
+   #emojis {
+    width: 40%;
+    margin-left: 30%;
+    margin-top: 0%;
+    height: 50px;
+  }
+
+  .e {
+    width: 14%;
+  }
+
+  #slide_down {
+    font-size: 68px;
+    width: 300px;
+    height: 90px;
+    margin-top: 8%;
+  }
+
+  #slide_up {
+    font-size: 68px;
+    font-weight: 900px;
+    margin-top: 10%;
+    height: 55px;
+  }
+
+  .btn_style {
+    height: 40px;
+    width: 130px;
+    border-radius:40px;
+    letter-spacing:1px;
+    font-size:12px;
+  }
+
+  #button {
+    margin-right: 20px;
+  }
+
+  #footer {
+    margin-left: 12%;
+  }
+}
 
 
 
